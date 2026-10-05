@@ -41,19 +41,26 @@ Your task is to containerize this existing application using Docker. You need to
 - To build the docker image run the command:
 
 ```bash
-
+docker build -t docker-node-app .
 ```
 
 - To run your docker container in port 3000 run the command:
 
 ```bash
-
+docker run -d -p 3000:3000 --name my-node-app docker-node-app
 ```
 
 ## Reflection Question
 **Answer the following question in the space below**: How does containerization with Docker differ from using virtual machines, and why might a development team choose Docker containers over VMs for deploying applications like the one you just containerized?
 
+A virtual machine runs a whole operating system on top of your computer, so it's big and slow to start. Docker containers are smaller because they share the computer's operating system and only include the app and what it needs to run.
 
+A team might choose Docker because it's faster, uses less memory, and everyone gets the same setup. That fixes the "it works on my machine" problem. I didn't have Node.js installed, but the app still ran in Docker, which shows how easy it is to share and run apps this way.
+
+## Screenshots
+
+![Home page](screenshots/homepage.png)
+![API status](screenshots/api-status.png)
 
 ## Application Requirements for Docker
 
